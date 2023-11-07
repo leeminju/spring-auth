@@ -7,7 +7,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 //Bean등록 메소드 위에 Configuration
 @Configuration
 public class PasswordConfig { //passwordConfig로 등록
-    //Bean으로 등록하고자하는 객체를 반환하는 메소드위에 @Bean 추가
+    //Bean으로 등록하고자하는 객체(PasswordEncoder)를 반환하는 메소드위에 @Bean 추가
     @Bean
     public PasswordEncoder passwordEncoder() { // passwordEncoder로 등록  PasswordEncoder->인터페이스
         return new BCryptPasswordEncoder();// PasswordEncoder를 구현한 구현체   (DI 주입)
